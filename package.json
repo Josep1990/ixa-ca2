@@ -1,0 +1,38 @@
+{
+  "name": "movie-project",
+  "version": "1.0.0",
+  "description": "Interactive Web Application CA 1",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josep1990/iwa-ca1.git"
+  },
+  "author": "Jose Paulo",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.3",
+    "axios": "^0.24.0",
+    "body-parser": "^1.20.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.1.4",
+    "nodemailer": "^6.7.5",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2"
+  },
+  "bugs": {
+    "url": "https://github.com/Josep1990/iwa-ca1/issues"
+  },
+  "homepage": "https://github.com/Josep1990/npiwa-ca1#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

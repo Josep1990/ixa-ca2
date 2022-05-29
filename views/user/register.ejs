@@ -1,0 +1,25 @@
+<%- include("../partials/header")%>
+
+<div class="login-box">
+    <h1>Register</h1>
+
+    <form action="/register" method="POST">
+        <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" name="username" placeholder="Username" required>
+        </div>
+        <div class="textbox">
+            <i class="fas fa-at" aria-hidden="true"></i>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="password" pattern=".{6,}" required title="Min 6 characters long" name="password" placeholder="Password">
+        </div>
+        <button class="btn-login">Submit</button>
+    </form>
+
+</div>
+
+
+<%- include("../partials/footer")%>
