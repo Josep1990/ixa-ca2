@@ -16,7 +16,7 @@ router.get("/register", function(req, res){
 });
 
 //Create route --------- Sign up
-router.post("/register", function(req, res){
+router.post("/register", function(req, res){ //get teh info from the form and save to the db
    const newUser = new User ({ username: req.body.username, email: req.body.email});    
    
    User.register(newUser, req.body.password, function(err, user){
@@ -24,7 +24,7 @@ router.post("/register", function(req, res){
             req.flash("error", err.message);
             return res.redirect("/register");
         }else{
-           passport.authenticate("local")(req, res, function(){
+           passport.authenticate("local")(req, res, function(){ //salt and hash passowords using passport
                req.flash("success", "Welcome " + user.username);
                res.redirect("/index");
            });

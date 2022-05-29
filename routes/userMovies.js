@@ -34,7 +34,7 @@ router.post("/", middleware.isLoggedin, function(req, res){
     }
     console.log(`the title is: ${title}  image source: ${poster_path} and overview ${overview}`);    
     const newMovie = {title:title, poster_path: poster_path, overview: overview, author:author}; //object to be add to the database
-    //add new task to the list and database
+    //add new movie to the list and database
     Movies.create(newMovie, function(err, newMovies){
         if(err){
             req.flash("error", "Sorry, please try again");

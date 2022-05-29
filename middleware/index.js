@@ -2,7 +2,7 @@ const middlewareObj = {};
  
 //======================================================================================
 
-middlewareObj.isLoggedin = function(req, res, next){
+middlewareObj.isLoggedin = function(req, res, next){ //checks if user is logged in before save or delete any movie
     if(req.isAuthenticated()){
         return next();
     }

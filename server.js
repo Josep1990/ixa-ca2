@@ -3,12 +3,12 @@ require("dotenv").config();  //load all the env varialbes on the serve
 const express  = require("express"), //express is a back end web application framework for Node.js
       app      = express()
       mongoose = require("mongoose"), //Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node. js
-      passportLocalMongoose = require("passport-local-mongoose"),
+      passportLocalMongoose = require("passport-local-mongoose"), //passport is used to ecript password in the database and hase
       localStrategy         = require("passport-local"),
       passport              = require("passport"),
-      methodOverride        = require("method-override"),
-      bodyParser            = require("body-parser"),
-      flash                 = require("connect-flash");
+      methodOverride        = require("method-override"), //allows to make http request using delete protocol
+      bodyParser            = require("body-parser"),//body parser to take info from the html forms
+      flash                 = require("connect-flash"); //display errors messages
 
  //===========================================================================================
  const User                = require("./models/user"),     
@@ -43,7 +43,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
-    res.locals.error       = req.flash("error");
+    res.locals.error       = req.flash("error"); //set errors message to display error and success
     res.locals.success     = req.flash("success");
     next();
 });
