@@ -4,7 +4,7 @@
   "description": "Interactive Web Application CA 1",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
     "axios": "^0.24.0",
     "body-parser": "^1.20.0",
     "connect-flash": "^0.1.1",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "express-session": "^1.17.3",
@@ -32,8 +33,7 @@
     "url": "https://github.com/Josep1990/iwa-ca1/issues"
   },
   "homepage": "https://github.com/Josep1990/npiwa-ca1#readme",
-  "devDependencies": {
-    "dotenv": "^10.0.0",
+  "devDependencies": {        
     "nodemon": "^2.0.15"
   }
 }
