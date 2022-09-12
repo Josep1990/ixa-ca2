@@ -33,7 +33,7 @@
     "url": "https://github.com/Josep1990/iwa-ca1/issues"
   },
   "homepage": "https://github.com/Josep1990/npiwa-ca1#readme",
-  "devDependencies": {        
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
